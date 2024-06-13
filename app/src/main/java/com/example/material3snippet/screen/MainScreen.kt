@@ -21,16 +21,19 @@ import com.example.material3snippet.navigation.Destination
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen() {
+    val navController = rememberNavController()
+
     Scaffold(
         topBar = {
             TopAppBar(title = {
                 Text(stringResource(id = R.string.top_app_bar))
             })
         },
-        bottomBar = { MyBottomAppBar() },
+        bottomBar = { MyBottomAppBar(
+            destinations = listOf(Destination.Buttons, Destination.Cards),
+            onDestination = { navController.navigate(it.route) }
+        ) },
     ) { paddingValues ->
-        val navController = rememberNavController()
-
         MainScreenNavHost(
             navController = navController,
             modifier = Modifier.padding(paddingValues)
@@ -50,6 +53,10 @@ fun MainScreenNavHost(
     ) {
         composable(route = Destination.Buttons.route) {
             ButtonsScreen()
+        }
+
+        composable(route = Destination.Cards.route) {
+            CardsScreen()
         }
     }
 }

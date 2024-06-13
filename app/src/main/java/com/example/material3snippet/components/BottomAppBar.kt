@@ -20,23 +20,39 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.material3snippet.navigation.Destination
 import com.example.material3snippet.theme.Material3SnippetTheme
 
 @Composable
-fun MyBottomAppBar() {
+fun MyBottomAppBar(
+    destinations: List<Destination> = emptyList(),
+    onDestination: (Destination) -> Unit = {}
+) {
     BottomAppBar(
         actions = {
-            IconButton(onClick = { /* do something */ }) {
-                Icon(Icons.Filled.Check, contentDescription = "Localized description")
+            IconButton(
+                onClick = {
+                    destinations.getOrNull(0)?.let { onDestination.invoke(it) }
+                }
+            ) {
+                Icon(
+                    imageVector = destinations.getOrNull(0)?.icon ?: Icons.Filled.Check,
+                    contentDescription = "Localized description"
+                )
             }
-            IconButton(onClick = { /* do something */ }) {
+            IconButton(
+                onClick = {
+                    destinations.getOrNull(1)?.let { onDestination.invoke(it) }
+                }
+            ) {
                 BadgedBox(badge = { Badge() }) {
                     Icon(
-                        Icons.Filled.Edit,
-                        contentDescription = "Localized description",
+                        imageVector = destinations.getOrNull(1)?.icon ?: Icons.Filled.Edit,
+                        contentDescription = "Localized description"
                     )
                 }
             }
+
             IconButton(onClick = { /* do something */ }) {
                 BadgedBox(badge = {
                     Badge {
@@ -56,16 +72,19 @@ fun MyBottomAppBar() {
                     )
                 }
             }
+
             IconButton(onClick = { /* do something */ }) {
                 BadgedBox(badge = {
-                    val badgeNumber = "999+"
+                    Badge {
+                        val badgeNumber = "999+"
 
-                    Text(
-                        badgeNumber,
-                        modifier = Modifier.semantics {
-                            contentDescription = "$badgeNumber new notifications"
-                        }
-                    )
+                        Text(
+                            badgeNumber,
+                            modifier = Modifier.semantics {
+                                contentDescription = "$badgeNumber new notifications"
+                            }
+                        )
+                    }
                 }) {
                     Icon(
                         Icons.Filled.Email,

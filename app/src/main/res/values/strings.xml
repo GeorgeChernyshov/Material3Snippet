@@ -4,8 +4,10 @@
     <!-- component_names -->
     <string name="elevated_button">Elevated Button</string>
     <string name="elevated_button_disabled">Elevated Button (disabled)</string>
+    <string name="elevated_card">Elevated Card</string>
     <string name="filled_button">Filled Button</string>
     <string name="filled_button_disabled">Filled Button (disabled)</string>
+    <string name="filled_card">Filled Card</string>
     <string name="filled_tonal_button">Filled Tonal Button</string>
     <string name="filled_tonal_button_disabled">Filled Tonal Button (disabled)</string>
     <string name="my_elevated_button">My Elevated Button</string>
@@ -18,10 +20,12 @@
     <string name="my_text_button_disabled">My Text button (disabled)</string>
     <string name="outlined_button">Outlined Button</string>
     <string name="outlined_button_disabled">Outlined Button (disabled)</string>
+    <string name="outlined_card">Outlined Card</string>
     <string name="text_button">Text button</string>
     <string name="text_button_disabled">Text button (disabled)</string>
     <string name="top_app_bar">Regular Top App Bar</string>
 
     <!-- screen_labels -->
     <string name="screen_buttons">Button Types</string>
+    <string name="screen_cards">Card Types</string>
 </resources>
