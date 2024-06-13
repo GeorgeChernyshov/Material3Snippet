@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Material3Snippet</string>
+
+    <!-- component_names -->
+    <string name="elevated_button">Elevated Button</string>
+    <string name="elevated_button_disabled">Elevated Button (disabled)</string>
+    <string name="filled_button">Filled Button</string>
+    <string name="filled_button_disabled">Filled Button (disabled)</string>
+    <string name="filled_tonal_button">Filled Tonal Button</string>
+    <string name="filled_tonal_button_disabled">Filled Tonal Button (disabled)</string>
+    <string name="my_elevated_button">My Elevated Button</string>
+    <string name="my_elevated_button_disabled">My Elevated Button (disabled)</string>
+    <string name="my_filled_tonal_button">My Filled Tonal Button</string>
+    <string name="my_filled_tonal_button_disabled">My Filled Tonal Button (disabled)</string>
+    <string name="my_outlined_button">My Outlined Button</string>
+    <string name="my_outlined_button_disabled">My Outlined Button (disabled)</string>
+    <string name="my_text_button">My Text button</string>
+    <string name="my_text_button_disabled">My Text button (disabled)</string>
+    <string name="outlined_button">Outlined Button</string>
+    <string name="outlined_button_disabled">Outlined Button (disabled)</string>
+    <string name="text_button">Text button</string>
+    <string name="text_button_disabled">Text button (disabled)</string>
+    <string name="top_app_bar">Regular Top App Bar</string>
+
+    <!-- screen_labels -->
+    <string name="screen_buttons">Button Types</string>
+</resources>
